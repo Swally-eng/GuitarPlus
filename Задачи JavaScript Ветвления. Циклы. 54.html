@@ -1,0 +1,38 @@
+<script>
+let a = Number(prompt("Введите число"));
+let weight = 0;
+
+getweight(a);
+
+function getweight(k) {
+while (k >= 1) {
+    weight += k % 10;
+    k = parseInt(k/10);
+}
+if (weight >= 10) {
+    k = weight;
+    weight = 0;
+    getweight(k);
+}
+}
+alert(weight);
+</script>
+
+//2 решение//
+
+<script>
+    let a = Number(prompt("Введите число"));
+    let weight = 10;
+    while (weight > 9){
+        weight = 0;
+    while (a >= 1) {
+        weight += a % 10;
+        a = parseInt(a/10);
+    }
+    a = weight;
+
+}
+    alert(weight);
+    </script>
+
+    
