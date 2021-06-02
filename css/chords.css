@@ -1,0 +1,36 @@
+.string {
+	z-index: 2;
+	height: 20px;
+	margin-bottom: 10px;	
+}
+
+.string_numeration {
+	color: #fcc535;
+	text-align: center;
+	text-shadow: 1px 3px 3px black;
+}
+
+.note {
+	z-index: 1;
+	width: 40px;
+	margin-right: 10px;
+	border: 1px solid black;
+	background: #202020;
+}
+
+
+
+.chords {
+	height: 20px;
+	background: #8b8b8b;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.chord_name {
+	color: #000000;
+	text-align: center;
+	width: 60px;
+	margin-right: 20px;
+	border: 1px solid black;
+}

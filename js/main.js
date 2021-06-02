@@ -21,7 +21,7 @@
 
       });       
 
-  	})
+  	});
 
 
   	/*----------------------------------------------------*/
@@ -35,8 +35,8 @@
 	      animation: 'fade',
 	      controlNav: true,
 	      directionNav: false,
-	      smoothHeight: true,
-	      slideshowSpeed: 7000,
+	    //   smoothHeight: true,
+	      slideshowSpeed: 6000,
 	      animationSpeed: 600,
 	      randomize: false,
 	      before: function(slider){
@@ -64,7 +64,7 @@
 	      animation: 'slide',
 	      controlNav: true,
 	      directionNav: false,
-	      smoothHeight: true,
+	    //   smoothHeight: true,
 	      slideshowSpeed: 7000,
 	      animationSpeed: 600,
 	      randomize: false,
@@ -111,7 +111,9 @@
 
 			active_section = $('section#' + this.element.id);
 
-			if (direction === "up") active_section = active_section.prev();
+			if (direction === "up") {
+				active_section = active_section.prev();
+			}
 
 			var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');			
 
@@ -145,7 +147,7 @@
                         title: "Menu",
                         href : "#" } 
                         );
-  	var nav_wrap = $('nav#nav-wrap')
+  	var nav_wrap = $('nav#nav-wrap');
   	var nav = $("ul#nav");  
    
    /* if JS is enabled, remove the two a.mobile-btns 
@@ -159,14 +161,22 @@
     	nav.slideToggle("fast");     
   	});
 
-  	if (toggle_button.is(':visible')) nav.addClass('mobile');
+  	if (toggle_button.is(':visible')) {
+		nav.addClass('mobile');
+		{}
   	$(window).resize(function() {
-   	if (toggle_button.is(':visible')) nav.addClass('mobile');
-    	else nav.removeClass('mobile');
+   	if (toggle_button.is(':visible')) {
+		nav.addClass('mobile');
+	}
+    	else {
+			nav.removeClass('mobile');
+		}
   	});
 
   	$('ul#nav li a').on("click", function() {      
-   	if (nav.hasClass('mobile')) nav.fadeOut('fast');      
+   	if (nav.hasClass('mobile')) {
+		nav.fadeOut('fast');      
+	}
   	});
 
 
@@ -211,7 +221,7 @@
    /*----------------------------------------------------*/
 	/*  Placeholder Plugin Settings
 	------------------------------------------------------ */  	 
-	$('input, textarea').placeholder()  
+	$('input, textarea').placeholder();
 
    
 	/*----------------------------------------------------*/
@@ -239,7 +249,7 @@
 		      success: function(msg) {
 
 	            // Message was sent
-	            if (msg == 'OK') {
+	            if (msg === 'OK') {
 	            	sLoader.fadeOut(); 
 	               $('#message-warning').hide();
 	               $('#contactForm').fadeOut();
@@ -266,5 +276,5 @@
 
 	});
 	
-
-})(jQuery);
+	}
+})	(jQuery);
